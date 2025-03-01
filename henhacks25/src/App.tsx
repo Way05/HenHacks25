@@ -25,14 +25,16 @@ function handleSubmit(e: any) {
 function App() {
   return (
     <div className="App">
-      <form method="post" onSubmit={handleSubmit}>
-      <label>
-        Text input: <input name="myInput" defaultValue="Some initial value" />
-      </label>
+      <div className="input">
+        <form method="post" onSubmit={handleSubmit}>
+        <label>
+          Text input: <input name="myInput" defaultValue="Some initial value" />
+        </label>
 
-      <button type="reset">Reset form</button>
-      <button type="submit">Submit form</button>
-    </form>
+        <button type="reset">Reset form</button>
+        <button type="submit">Submit form</button>
+      </form>
+      </div>
     </div>
   );
 }
