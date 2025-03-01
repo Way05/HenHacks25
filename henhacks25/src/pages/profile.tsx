@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 /*TODO
 Profile Page: 
 Age x 
@@ -48,6 +49,14 @@ const ProfilePage: React.FC = () => {
 
     <textarea name="Past" placeholder="Enter any past mental health diagnoses, symptoms, intensity or anything else that may be relevant to you mental health" />
 
+    <div>
+      <Link to="/">
+            <button>Go to Home Page</button>
+      </Link>
+      <Link to="/chat">
+        <button>Go to Chat Page</button>
+      </Link>
+    </div>
     </div>
   );
 };
