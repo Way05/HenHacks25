@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 /*TODO
-Profile Page: 
-Age x 
-Occupation x 
-Gender x 
-Past symptoms including duration, intensity, and triggers
-Social and environmental factors
+grab text from user input
 Direct to profile page if never been to web before
 */
+
+
+
 const ProfilePage: React.FC = () => {
+    const [age, setAge] = useState("");
+    const [pro, setPro] = useState("");
+    const [occ, setOcc] = useState("");
+    const [past, setPast] = useState("");
   return (
     <div>
       <h1>Edit Your Profile</h1>
@@ -47,7 +50,7 @@ const ProfilePage: React.FC = () => {
 
     </select>
 
-    <textarea name="Past" placeholder="Enter any past mental health diagnoses, symptoms, intensity or anything else that may be relevant to you mental health" />
+    <textarea name="Past" onChange={(e) => setAge(e.target.value)} placeholder="Enter any past mental health diagnoses, symptoms, intensity or anything else that may be relevant to you mental health" />
 
     <div>
       <Link to="/">
