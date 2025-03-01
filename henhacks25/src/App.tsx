@@ -7,45 +7,33 @@ import ProfilePage from "./pages/profile";
 import { fetchResponse } from './gemini_api';
 
 function handleSubmit(e: any) {
-  // Prevent the browser from reloading the page
-  e.preventDefault();
+    e.preventDefault();
 
-  // Read the form data
-  const form = e.target;
-  const formData = new FormData(form);
+    const form = e.target;
+    const formData = new FormData(form);
 
-  // You can pass formData as a fetch body directly:
-  fetch('/some-api', { method: form.method, body: formData });
+    const formJson = Object.fromEntries(formData.entries());
+    console.log(formJson.myInput);
 
-  // Or you can work with it as a plain object:
-  const formJson = Object.fromEntries(formData.entries());
-  console.log(formJson);
-}
+    //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
+    // const response = fetchResponse(formJson.myInput.toString());
+    // console.log(response);
+  }
 
 function App() {
   return (
-    <Router> {/* Wrap everything in Router */}
-      <div className="App">
+    <div className="App">
+      <div className="input">
         <form method="post" onSubmit={handleSubmit}>
-          <label>
-            Text input: <input name="myInput" defaultValue="Some initial value" />
-          </label>
-          
-          <button type="reset">Reset form</button>
-          <button type="submit">Submit form</button>
-        </form>
+        <label>
+          Text input: <input name="myInput" defaultValue="Some initial value" />
+        </label>
 
-        {/* Add a link to ProfilePage */}
-        <Link to="/profile">
-          <button>Go to Profile Page</button> {/* Button to navigate to Profile page */}
-        </Link>
-
-        {/* Define routes for pages */}
-        <Routes>
-          <Route path="/profile" element={<ProfilePage />} /> {/* Profile page route */}
-        </Routes>
+        <button type="reset">Reset form</button>
+        <button type="submit">Submit form</button>
+      </form>
       </div>
-    </Router>
+    </div>
   );
 }
 
