@@ -13,6 +13,12 @@ const Home: React.FC = () => {
         <Link to="/profile">
           <button>Go to Profile Page</button>
         </Link>
+        <Link to="/chat">
+          <button>Go to Chat Page</button>
+        </Link>
+        <Link to="/home">
+          <button>Go to Home Page</button>
+        </Link>
       </div>
     </div>
   );
