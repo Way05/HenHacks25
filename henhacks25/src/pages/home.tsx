@@ -2,19 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function handleSubmit(e: any) {
-  e.preventDefault();
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  const formJson = Object.fromEntries(formData.entries());
-  console.log(formJson.myInput);
-
-  //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
-  // const response = fetchResponse(formJson.myInput.toString());
-  // console.log(response);
-}
+import { handleSubmit } from '../gemini_api';
 
 const Home: React.FC = () => {
   return (
