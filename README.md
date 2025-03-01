@@ -1,3 +1,3 @@
-# HenHacks24
+# HenHacks25
 
 Repository for our Henhacks project.
