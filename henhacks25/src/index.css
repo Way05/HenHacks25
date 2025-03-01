@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+body{
+  background-color: #6cf;
+  
+}
+
 .input {
   margin-top: 50%;
 }
