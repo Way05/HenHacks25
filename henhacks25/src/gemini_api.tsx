@@ -8,4 +8,18 @@ async function fetchResponse(prompt: string) {
     return result.response.text();
 }
 
-export { fetchResponse };
+function handleSubmit(e: any) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const formJson = Object.fromEntries(formData.entries());
+    console.log(formJson.myInput);
+
+    //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
+    // const response = fetchResponse(formJson.myInput.toString());
+    // console.log(response);
+  }
+
+export { handleSubmit };
