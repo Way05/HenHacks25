@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { handleSubmit } from '../gemini_api';
-
 const Home: React.FC = () => {
   return (
     <div className="Home">
@@ -15,9 +13,6 @@ const Home: React.FC = () => {
         </Link>
         <Link to="/chat">
           <button>Go to Chat Page</button>
-        </Link>
-        <Link to="/home">
-          <button>Go to Home Page</button>
         </Link>
       </div>
     </div>

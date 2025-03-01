@@ -12,7 +12,7 @@ function App() {
         {/* Define Routes */}
         <Routes>
           {/* Default Route for Home component */}
-          <Route path="/home" element={<Home />} />  {/* Home component is now the default */}
+          <Route path="/" element={<Home />} />  {/* Home component is now the default */}
           <Route path="/profile" element={<ProfilePage />} />  {/* ProfilePage route */}
           <Route path="/chat" element={<ChatPage />} />
         </Routes>

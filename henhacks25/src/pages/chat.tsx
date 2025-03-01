@@ -22,10 +22,9 @@ import { handleSubmit } from '../gemini_api';
   
         {/* Link to Profile Page */}
         <div className="nav">
-          <Link to="/home">
+          <Link to="/">
             <button>Go to Home Page</button>
           </Link>
-
           <Link to="/profile">
             <button>Go to Profile Page</button>
           </Link>
