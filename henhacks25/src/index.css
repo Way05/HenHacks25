@@ -13,7 +13,13 @@ code {
 }
 
 body{
-  background-color: #6cf;
+  background-image: url('./images/360_F_292731351_p4objwWzlIieS2Kh7kbWVWmOhNrNE5Ft.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background: #6cf; */
+
   
 }
 
