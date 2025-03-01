@@ -1,22 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function handleSubmit(e: any) {
-    e.preventDefault();
-  
-    const form = e.target;
-    const formData = new FormData(form);
-  
-    const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson.myInput);
-  
-    //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
-    // const response = fetchResponse(formJson.myInput.toString());
-    // console.log(response);
-  }
+import { handleSubmit } from '../gemini_api';
 
-
-  const Chat: React.FC = () => {
+  const ChatPage: React.FC = () => {
     return (
       <div className="Magic Mirror">
         <h1>Welcome to the Magic Mirror Chat Page</h1>
@@ -47,4 +34,4 @@ function handleSubmit(e: any) {
     );
   };
   
-  export default Chat;
+  export default ChatPage;
