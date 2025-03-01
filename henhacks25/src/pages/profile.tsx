@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 
 const ProfilePage: React.FC = () => {
   return (
-      <textarea name="input"/>
+    <div>
+      <h1>Profile Page</h1>
+      <textarea name="input" placeholder="Enter some text here" />
+    </div>
   );
-}
+};
 
 export default ProfilePage;
