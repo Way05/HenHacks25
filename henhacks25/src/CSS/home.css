@@ -14,12 +14,17 @@ body, html {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  img {
+    object-fit: fill;
+  }
   
   /* Navigation buttons container */
   .nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    position: fixed;
     bottom: 20px; /* Position the buttons at the bottom */
   }
   
@@ -46,8 +51,4 @@ body, html {
   /* Click effect */
   .nav button:active {
     transform: scale(0.95);
-  }
-  
-  .mirror_img {
-    margin: auto;
   }

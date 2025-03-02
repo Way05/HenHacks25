@@ -41,9 +41,9 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: fixed;
     bottom: 20px;
     left: 0;
+    position: fixed;
   }
   
   /* Make buttons bigger and rounded */
