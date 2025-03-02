@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "../App.css";
+import "../CSS/chat.css";
 
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
@@ -17,7 +17,7 @@ const ChatPage: React.FC = () => {
     }
     
     return (
-      <><div className="Magic Mirror">
+      <><div>
 
         <h1>Welcome to the Magic Mirror Chat Page</h1>
 
@@ -25,8 +25,10 @@ const ChatPage: React.FC = () => {
         <div className="input">
           <form method="post" onSubmit={handleData}>
             <label>
-              Text input: <input name="myInput" defaultValue="" />
+              <p>Input your text here:</p>
+              <input name="myInput" defaultValue="" />
             </label>
+            <br></br>
             <button type="reset">Reset form</button>
             <button type="submit">Submit form</button>
           </form>
