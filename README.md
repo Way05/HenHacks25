@@ -2,6 +2,6 @@
 
 Repository for our Henhacks project.
 
-Group Name: Wei-en and Friends
+Group Name: Bananas
 
 Members: Wei-en Tan, Daven Kaufmann, Brian Tran, James Wu
