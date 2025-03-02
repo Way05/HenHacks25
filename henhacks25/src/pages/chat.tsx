@@ -9,7 +9,7 @@ import { getUserInfo } from '../App';
 export const l_responses: string[] = [];
 
 const ChatPage: React.FC = () => {
-  const [response, setResponse] = useState("Waiting for input");
+  const [response, setResponse] = useState("Waiting for input...");
 
   const handleData = (data: any) => {
     handleSubmit(data).then(function (result) {
