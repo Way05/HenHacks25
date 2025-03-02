@@ -5,7 +5,23 @@ import Home from './pages/home';  // Import the Home component
 import ProfilePage from './pages/profile'; // Import ProfilePage
 import ChatPage from './pages/chat';
 
+
+
+export const getUserInfo = () => {
+  const user = {
+    name: localStorage.getItem("name"),
+    age: localStorage.getItem("age"),
+    job: localStorage.getItem("job"),
+    gender: localStorage.getItem("gender"),
+    past: localStorage.getItem("past"),
+  };
+  
+  return user;
+  
+};
+
 function App() {
+  
   return (
     <Router> {/* Make sure Router is wrapping the entire app */}
       <div className="App">

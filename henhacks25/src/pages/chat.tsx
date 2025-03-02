@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "../App.css";
 
 import { handleSubmit } from '../gemini_api';
 
@@ -20,9 +21,8 @@ import { handleSubmit } from '../gemini_api';
         <div className="input">
           <form method="post" onSubmit={handleData}>
             <label>
-              Text input: <input name="myInput" defaultValue="Some initial value" />
+              Text input: <input name="myInput" defaultValue="" />
             </label>
-  
             <button type="reset">Reset form</button>
             <button type="submit">Submit form</button>
           </form>
@@ -41,8 +41,18 @@ import { handleSubmit } from '../gemini_api';
             <button>Go to Profile Page</button>
           </Link>
         </div>
+
+      {/* Link to Profile Page */}
+      <div className="nav">
+        <Link to="/">
+          <button>Go to Home Page</button>
+        </Link>
+        <Link to="/profile">
+          <button>Go to Profile Page</button>
+        </Link>
       </div>
-    );
-  };
-  
-  export default ChatPage;
+    </div>
+  );
+};
+
+export default ChatPage;

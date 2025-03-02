@@ -1,0 +1,109 @@
+/* Ensure the body and html take full height */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Profile container to take up full height */
+  .profile-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* -------------------------------------------*/
+
+  /* Keep buttons centered at the bottom */
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+  }
+  
+  /* Make buttons bigger and rounded */
+  .button-container button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 10px;
+  }
+  
+  /* Hover effect */
+  .button-container button:hover {
+    background-color: #ea9e78;
+    transform: scale(1.05);
+  }
+  
+  /* Click effect */
+  .button-container button:active {
+    transform: scale(0.95);
+  }
+
+  /* -------------------------------------------*/
+
+/* Center the name box */
+.name-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Style input field */
+  .name-box {
+    width: 80%;
+    max-width: 200px;
+    height: 30px;
+    font-size: 18px;
+    padding: 15px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    text-align: center; /* Center the placeholder */
+    transition: all 0.5s ease-in-out;
+    color: #000;
+  }
+  
+  /* Label for floating effect */
+  .name-box-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #999;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  /* When the text box is focused or contains text, fade the placeholder */
+  .name-box:focus + .name-box-label,
+  .name-box:not(:placeholder-shown) + .name-box-label {
+    opacity: 0; /* Fade out placeholder */
+  }
+  
+  /* Reset placeholder visibility if input is empty */
+  .name-box:placeholder-shown + .name-box-label {
+    opacity: 1; /* Placeholder is visible if input is empty */
+  }
+  
+  
+  
+  
+  

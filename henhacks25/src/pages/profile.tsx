@@ -1,65 +1,97 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useState } from "react";
-/*TODO
-grab text from user input
-Direct to profile page if never been to web before
-*/
-
-
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../CSS/profile.css";
 
 const ProfilePage: React.FC = () => {
-    const [age, setAge] = useState("");
-    const [pro, setPro] = useState("");
-    const [occ, setOcc] = useState("");
-    const [past, setPast] = useState("");
+  // State for user inputs
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [job, setJob] = useState("");
+  const [gender, setGender] = useState("");
+  const [past, setPast] = useState("");
+
+  // Load stored values when component mounts
+  useEffect(() => {
+    setName(localStorage.getItem("name") || "");
+    setAge(localStorage.getItem("age") || "");
+    setJob(localStorage.getItem("job") || "");
+    setGender(localStorage.getItem("gender") || "");
+    setPast(localStorage.getItem("past") || "");
+  }, []);
+
+  // Store data when values change
+  const handleChange = (setter: React.Dispatch<React.SetStateAction<string>>, key: string) => 
+    (e: React.ChangeEvent<HTMLTextAreaElement | HTMLSelectElement | HTMLInputElement>) => {
+      setter(e.target.value);
+      localStorage.setItem(key, e.target.value);
+    };
+
   return (
-    <div>
+    <div className="profile-container">
       <h1>Edit Your Profile</h1>
-      <textarea name="name" placeholder="Enter your name here" />
-      <select name="age">
-        <option value="" disabled selected>Choose your age</option>
-        <option value="Prefer not to say">Prefer not to say</option>
-        {Array.from({ length: 100 }, (_, index) => index + 1).map(age => (
-            <option key={age} value={age}>{age}</option>
-        ))}
-       </select>
 
+      <div className="input-container">
+        {/* Name Input with Floating Placeholder */}
+        <div className="name-container">
+          <input
+            type="text"
+            name="name"
+            className="name-box"
+            placeholder=" "
+            value={name}
+            onChange={handleChange(setName, "name")}
+          />
+          <label className="name-box-label">Write name here</label>
+        </div>
 
-      <select name="job">
-        <option value="" disabled selected>
-            Choose your job
-        </option>
-        <option value="Student">Student</option>
-        <option value="Student & Employed">Student & Employed</option>
-        <option value="Full Time Employed">Full Time Employed</option>
-        <option value="Part Time Employed">Part Time Employed</option>
-        <option value="Unemployed">Unemployed</option>
-        <option value="">Prefer not to say</option>
-    </select>
+        {/* Age Dropdown */}
+        <select name="age" value={age} onChange={handleChange(setAge, "age")}>
+          <option value="" disabled>Choose your age</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+          {Array.from({ length: 100 }, (_, index) => index + 1).map((num) => (
+            <option key={num} value={num}>{num}</option>
+          ))}
+        </select>
 
-    <select name="gender">
-        <option value="" disabled selected>
-            Choose your pronouns
-        </option>
-        <option value="He">he/him</option>
-        <option value="Her">she/her</option>
-        <option value="They">them/they</option>
-        <option value="Other">Other</option>
-        <option value="">Prefer not to say</option>
+        {/* Job Dropdown */}
+        <select name="job" value={job} onChange={handleChange(setJob, "job")}>
+          <option value="" disabled>Choose your job</option>
+          <option value="Student">Student</option>
+          <option value="Student & Employed">Student & Employed</option>
+          <option value="Full Time Employed">Full Time Employed</option>
+          <option value="Part Time Employed">Part Time Employed</option>
+          <option value="Unemployed">Unemployed</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
 
-    </select>
+        {/* Gender Dropdown */}
+        <select name="gender" value={gender} onChange={handleChange(setGender, "gender")}>
+          <option value="" disabled>Choose your pronouns</option>
+          <option value="He">he/him</option>
+          <option value="Her">she/her</option>
+          <option value="They">they/them</option>
+          <option value="Other">Other</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
 
-    <textarea name="Past" onChange={(e) => setAge(e.target.value)} placeholder="Enter any past mental health diagnoses, symptoms, intensity or anything else that may be relevant to you mental health" />
+        {/* Past Mental Health Info */}
+        <textarea
+          name="past"
+          placeholder="Enter any past mental health diagnoses, symptoms, intensity, or anything else relevant"
+          value={past}
+          onChange={handleChange(setPast, "past")}
+        />
+      </div>
 
-    <div>
-      <Link to="/">
-            <button>Go to Home Page</button>
-      </Link>
-      <Link to="/chat">
-        <button>Go to Chat Page</button>
-      </Link>
-    </div>
+      {/* Navigation Buttons at Bottom */}
+      <div className="button-container">
+        <Link to="/">
+          <button>Go to Home Page</button>
+        </Link>
+        <Link to="/chat">
+          <button>Go to Chat Page</button>
+        </Link>
+      </div>
     </div>
   );
 };
