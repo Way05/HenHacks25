@@ -75,8 +75,13 @@ img{
   margin: 5px;
 }
 
+.chat-container{
+  margin-top: -20px;
+}
+
 .chat-container .input {
   margin-top: 10px; /* Adjust this value as needed */
+  padding-top: 10px;
 }
 
 .chat-container label {
@@ -87,7 +92,7 @@ img{
 .chat-container input {
   margin-left: 10px; 
   padding-top: 0; 
-  transform: (0,-900); 
+  transform: (90%,-900%); 
   text-align: left; 
   size: auto;
 }
