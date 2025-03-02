@@ -11,7 +11,7 @@ async function fetchResponse(prompt: string) {
     return result.response.text();
 }
 
-function handleSubmit(e: any) {
+function handleSubmit(e: any){
   
     e.preventDefault();
 
@@ -22,8 +22,8 @@ function handleSubmit(e: any) {
     // console.log(formJson.myInput);
 
     //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
-    l_inputs.push(formJson.myInput.toString())
     const response = fetchResponse(construct_prompt(formJson.myInput.toString(),l_inputs.join('\n\n\n'),l_responses.join('\n\n\n')));
+    l_inputs.push(construct_prompt(formJson.myInput.toString(),l_inputs.join('\n\n\n'),l_responses.join('\n\n\n')))
 
     // console.log(response);
     return response
