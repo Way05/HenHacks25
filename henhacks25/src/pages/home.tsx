@@ -7,12 +7,21 @@ const Home: React.FC = () => {
   return (
     <div className="Home">
       <h1>Welcome to the Magic Mirror</h1>
-      <div className="imgDiv">
 
-      <img src="/images/mirror.png" alt="" />
+      {/* Instructions Div */}
+      <div className="instructions">
+        <h2>How to Use</h2>
+        <p>
+          Welcome to the Magic Mirror! This is where you can interact with the AI. To get started,
+          click on the buttons below to either edit your profile or chat with the AI. Enjoy your experience!
+        </p>
       </div>
 
-      {/* Link to Profile Page */}
+      <div className="imgDiv">
+        <img src="/images/mirror.png" alt="Magic Mirror" />
+      </div>
+
+      {/* Navigation Buttons */}
       <div className="nav">
         <Link to="/profile">
           <button>Edit Your Profile</button>

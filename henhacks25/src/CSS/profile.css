@@ -202,3 +202,11 @@ textarea {
     justify-content: center;
     align-items: center;
   }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+  }
