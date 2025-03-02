@@ -5,8 +5,8 @@ import "../App.css";
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
 
-  const ChatPage: React.FC = () => {
-    const [response, setResponse] = useState("Waiting for input");
+const ChatPage: React.FC = () => {
+  const [response, setResponse] = useState("Waiting for input");
 
     const handleData = (data: any) => {
       const output = handleSubmit(data).then(function(e) {
@@ -30,11 +30,7 @@ import { getUserInfo } from '../App';
           </form>
         </div>
 
-        <div>
-          <p>{response}</p>
-        </div>
-  
-        {/* Link to Profile Page */}
+        {/* Link to Profile and Home Page */}
         <div className="nav">
           <Link to="/">
             <button>Go to Home Page</button>
@@ -43,6 +39,11 @@ import { getUserInfo } from '../App';
             <button>Go to Profile Page</button>
           </Link>
         </div>
+      </div>
+
+      <div className="response">
+        <p>{response}</p>
+      </div>
     </div>
   );
 };
