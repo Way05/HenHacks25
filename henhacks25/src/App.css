@@ -74,3 +74,22 @@ img{
 .image-container .nav button {
   margin: 5px;
 }
+
+.chat-container .input {
+  margin-top: 10px; /* Adjust this value as needed */
+}
+
+.chat-container label {
+  display: flex;
+  align-items: center;
+}
+
+.chat-container input {
+  margin-left: 10px; 
+  padding-top: 0; 
+  transform: (0,-900); 
+  text-align: left; 
+  size: auto;
+}
+
+

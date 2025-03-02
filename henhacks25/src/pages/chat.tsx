@@ -20,12 +20,12 @@ const ChatPage: React.FC = () => {
   return (
     <div className="chat-container">
       <h1>Welcome to the Magic Mirror Chat Page</h1>
-
+      <img src = "/images/mirror.jpg" alt = "" />
       {/* Input Form (Left-Aligned) */}
-      <div className="input">
+      <div className="input" style={{ marginTop: '10px' }}>
         <form method="post" onSubmit={handleData}>
           <label>
-            <p>Input your text here:</p>
+            <p style={{ margin: 0 }}>Input your text here:</p>
             <input name="myInput" defaultValue="" />
           </label>
           <br />
