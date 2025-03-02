@@ -14,9 +14,9 @@ body, html {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
   height: 100vh; /* Full height of the viewport */
-  position: relative;
+  /* position: relative; */
 }
 
 /* Style for the header (h1) */
@@ -73,6 +73,7 @@ img {
   justify-content: center;
   gap: 15px;
   position: absolute;
+  bottom: 20px;
 }
 
 /* Buttons */
