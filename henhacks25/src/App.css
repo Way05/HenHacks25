@@ -52,13 +52,14 @@ img{
 .image-container img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .image-container .input {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(100%, -50%);
   text-align: center;
 }
 
