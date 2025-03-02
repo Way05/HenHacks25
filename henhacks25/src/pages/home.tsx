@@ -7,14 +7,15 @@ const Home: React.FC = () => {
     <div className="Home">
       <h1>Welcome to the Home Page</h1>
       <img src="/images/mirror.jpg" alt="" />
+      <h1>Welcome to Magic Mirror Mental Health Helper</h1>
 
       {/* Link to Profile Page */}
       <div className="nav">
         <Link to="/profile">
-          <button>Go to Profile Page</button>
+          <button>Edit Your Profile</button>
         </Link>
         <Link to="/chat">
-          <button>Go to Chat Page</button>
+          <button>Chat With Magic Mirror</button>
         </Link>
       </div>
     </div>
