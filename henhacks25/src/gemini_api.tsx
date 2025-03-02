@@ -15,11 +15,12 @@ function handleSubmit(e: any) {
     const formData = new FormData(form);
 
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson.myInput);
+    // console.log(formJson.myInput);
 
     //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
-    // const response = fetchResponse(formJson.myInput.toString());
+    const response = fetchResponse(formJson.myInput.toString());
     // console.log(response);
+    return response
   }
 
 export { handleSubmit };
