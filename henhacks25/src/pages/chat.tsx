@@ -35,7 +35,7 @@ const ChatPage: React.FC = () => {
       {/* AI Response (Right-Aligned) */}
       <div className="response-container">
         <div>
-      <img src = "/images/mirror.jpg" alt = "" />
+      <img src = "/images/hen.png" alt = "" />
 
         </div>
         <div className="response">
