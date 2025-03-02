@@ -29,8 +29,8 @@ const ProfilePage: React.FC = () => {
   return (
     <div className="profile-container">
       <h1>Edit Your Profile</h1>
-
       <div className="input-container">
+      <p>Add some details for Gemini to get to know you!</p>
         {/* Name Input with Floating Placeholder */}
         <div className="name-container">
           <input
