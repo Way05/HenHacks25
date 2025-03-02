@@ -10,7 +10,7 @@ const ChatPage: React.FC = () => {
       <h1>Welcome to the Magic Mirror Chat Page</h1>
 
       {/* Add an image */}
-      <img src="images/test.jpg" alt="" />
+      <img src="images/mirror.jpg" alt="" />
 
       {/* Form */}
       <div className="input">
