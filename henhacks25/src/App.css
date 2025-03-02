@@ -44,16 +44,32 @@ img{
   }
 }
 
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
 .image-container img {
-  width: auto;
-  height: 50;
-  transform: translate(3%,-4%);
+  width: 100%;
+  height: auto;
 }
 
 .image-container .input {
   position: absolute;
-  top: 80%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: bottom;
+  text-align: center;
+}
+
+.image-container .nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.image-container .nav button {
+  margin: 5px;
 }
