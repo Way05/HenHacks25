@@ -14,10 +14,9 @@
 }
 
 
-image{
-  display: block;
-  max-width: 100%;
-  
+img{
+  height: 500px;
+  width: 500px;
 }
 .App-header {
   background-color: #282c34;
