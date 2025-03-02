@@ -8,14 +8,13 @@ body, html {
   
   /* Home page container to take up full height */
   .Home {
-    flex: 1;
+    /* flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space out elements */
+    justify-content: space-between;
     align-items: center;
-    text-align: center; /* Center the text */
     padding: 20px;
-    position: relative;
+    position: relative; */
   }
   
   /* Style for the header (h1) */
@@ -53,7 +52,7 @@ body, html {
     color: rgb(0, 0, 0);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0 10px; /* Space between the buttons */
+    margin: 10px; /* Space between the buttons */
   }
   
   /* Hover effect */

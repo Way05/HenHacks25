@@ -52,13 +52,14 @@ img{
 .image-container img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .image-container .input {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(100%, -50%);
   text-align: center;
 }
 
@@ -73,3 +74,27 @@ img{
 .image-container .nav button {
   margin: 5px;
 }
+
+.chat-container{
+  margin-top: -20px;
+}
+
+.chat-container .input {
+  margin-top: 10px; /* Adjust this value as needed */
+  padding-top: 10px;
+}
+
+.chat-container label {
+  display: flex;
+  align-items: center;
+}
+
+.chat-container input {
+  margin-left: 10px; 
+  padding-top: 0; 
+  transform: (90%,-900%); 
+  text-align: left; 
+  size: auto;
+}
+
+

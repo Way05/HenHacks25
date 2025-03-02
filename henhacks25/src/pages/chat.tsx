@@ -1,54 +1,62 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "../App.css";
+import "../CSS/chat.css";
 
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
-export const l_responses: string[] = []
+
+export const l_responses: string[] = [];
+
 const ChatPage: React.FC = () => {
   const [response, setResponse] = useState("Waiting for input");
 
-    const handleData = (data: any) => {
-      const output = handleSubmit(data).then(function(result) {
-        setResponse(result);
-        l_responses.push(result)
+  const handleData = (data: any) => {
+    handleSubmit(data).then(function (result) {
+      setResponse(result);
+      l_responses.push(result);
+    });
+  };
 
-      });
-    }
-    
-    return (
-      <><div className="Magic Mirror">
+  return (
+    <div className="chat-container">
+      <h1>Welcome to the Magic Mirror Chat Page</h1>
+      {/* Input Form (Left-Aligned) */}
+      <div className="input" style={{ marginTop: '10px' }}>
+        <form method="post" onSubmit={handleData}>
+            <p>Input your text here:</p>
+            <input name="myInput" defaultValue="" />
+          <br />
+          <button type="reset">Reset form</button>
+          <button type="submit">Submit form</button>
+        </form>
+      </div>
 
-        <h1>Welcome to the Magic Mirror Chat Page</h1>
+      {/* AI Response (Right-Aligned) */}
+      <div className="response-container">
+        <div>
+      <img src = "/images/mirror.jpg" alt = "" />
 
-        {/* Form */}
-        <div className="input">
-          <form method="post" onSubmit={handleData}>
-            <label>
-              Text input: <input name="myInput" defaultValue="" />
-            </label>
-            <button type="reset">Reset form</button>
-            <button type="submit">Submit form</button>
-          </form>
         </div>
-
-        {/* Link to Profile and Home Page */}
-        <div className="nav">
-          <Link to="/">
-            <button>Go to Home Page</button>
-          </Link>
-          <Link to="/profile">
-            <button>Go to Profile Page</button>
-          </Link>
-        </div>
-      </div><div className="response">
+        <div className="response">
           <p>{response}</p>
-        </div></>
+        </div>
+      </div>
+
+      {/* Navigation Buttons at Bottom */}
+      <div className="nav">
+        <Link to="/">
+          <button>Go to Home Page</button>
+        </Link>
+        <Link to="/profile">
+          <button>Go to Profile Page</button>
+        </Link>
+      </div>
+    </div>
   );
 };
 
-export function construct_prompt(input: string, prevI: string, prevO: string): string{
-  const user = getUserInfo()
+export function construct_prompt(input: string, prevI: string, prevO: string): string {
+  const user = getUserInfo();
   return `
     input: You are an AI chatbot designed to help users with mental health crises, concerns, or daily stress. YOu are themed as a "magic mirror"
     If they just need to talk, listen to their problems.
@@ -60,7 +68,7 @@ export function construct_prompt(input: string, prevI: string, prevO: string): s
     - Age: ${user.age}
     - Pronouns: ${user.gender}
     - Job: ${user.job}
-    - Mental health history: ${user.past} don't reference this unless its releveant to user input
+    - Mental health history: ${user.past} (Don't reference this unless it's relevant to user input)
 
     user prompt: (This is what the user has inputted) 
     "${input}"
@@ -69,9 +77,8 @@ export function construct_prompt(input: string, prevI: string, prevO: string): s
     - Previous user inputs: ${prevI}
     - Previous AI responses: ${prevO}
 
-    Please take all of this information into consideration when responding. 
-  `
+    Please take all of this information into consideration when responding.
+  `;
 }
-
 
 export default ChatPage;
