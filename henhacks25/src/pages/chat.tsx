@@ -34,9 +34,11 @@ const ChatPage: React.FC = () => {
         </form>
       </div>
 
-      {/* AI Response (Left-Aligned) */}
-      <div className="response">
-        <p>{response}</p>
+      {/* AI Response (Right-Aligned) */}
+      <div className="response-container">
+        <div className="response">
+          <p>{response}</p>
+        </div>
       </div>
 
       {/* Navigation Buttons at Bottom */}
