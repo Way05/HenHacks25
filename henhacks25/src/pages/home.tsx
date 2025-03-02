@@ -4,9 +4,9 @@ import "../CSS/home.css";
 
 const Home: React.FC = () => {
   return (
-    <div className="Home">
+    <div>
       <h1>Welcome to the Home Page</h1>
-      <img src="/images/mirror.jpg" alt="" />
+      <img className="mirror_img" src="/images/mirror.png" alt="" />
 
       {/* Link to Profile Page */}
       <div className="nav">

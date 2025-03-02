@@ -30,3 +30,14 @@
     justify-content: center;
     bottom: 20px; /* Position the buttons at the bottom */
   }
+
+  .response {
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    left: 50%;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    background-color: #ffffff;
+  }

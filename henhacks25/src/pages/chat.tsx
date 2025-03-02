@@ -34,6 +34,11 @@ const ChatPage: React.FC = () => {
           </form>
         </div>
 
+          <p>Output</p>
+        <div className="response">
+          <p>{response}</p>
+        </div>
+
         {/* Link to Profile and Home Page */}
         <div className="nav">
           <Link to="/">
@@ -43,9 +48,7 @@ const ChatPage: React.FC = () => {
             <button>Go to Profile Page</button>
           </Link>
         </div>
-      </div><div className="response">
-          <p>{response}</p>
-        </div></>
+      </div></>
   );
 };
 
