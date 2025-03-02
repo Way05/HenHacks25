@@ -17,7 +17,24 @@ body, html {
     position: relative;
   }
   
-  /* -------------------------------------------*/
+  /* ------------------------------------------- */
+
+  /* Style for the header (h1) */
+h1 {
+    font-size: 36px; /* Larger font size for the header */
+    font-weight: bold; /* Make the header bold */
+    color: #ffffff; /* Dark gray color for text */
+    text-align: center; /* Center-align the text */
+    margin-top: 30px; /* Space above the header */
+    margin-bottom: 20px; /* Space below the header */
+    font-family: 'Arial', sans-serif; /* Set a clean sans-serif font */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 1px; /* Add spacing between letters */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for the header */
+  }
+  
+/* ------------------------------------------- */
 
   /* Keep buttons centered at the bottom */
   .button-container {
@@ -53,10 +70,10 @@ body, html {
     transform: scale(0.95);
   }
 
-  /* -------------------------------------------*/
-
-/* Center the name box */
-.name-container {
+  /* ------------------------------------------- */
+  
+  /* Center the name box */
+  .name-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -92,7 +109,7 @@ body, html {
     transition: opacity 0.3s ease-out;
   }
   
-  /* When the text box is focused or contains text, fade the placeholder */
+  /* When the text box is focused, fade the placeholder */
   .name-box:focus + .name-box-label,
   .name-box:not(:placeholder-shown) + .name-box-label {
     opacity: 0; /* Fade out placeholder */
@@ -103,7 +120,59 @@ body, html {
     opacity: 1; /* Placeholder is visible if input is empty */
   }
   
+  /* ------------------------------------------- */
   
+  /* Center and style the dropdowns */
+.select-container {
+    width: 100%;
+    max-width: 250px; /* Adjusted max width to make the dropdown narrower */
+    margin-top: 20px; /* Space above each dropdown */
+    margin-bottom: 20px; /* Space below each dropdown */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
+  /* Style individual dropdown boxes */
+  select {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px; /* Rounded edges */
+    border: 2px solid #000000;
+    outline: none;
+    text-align: center; /* Center the options */
+    transition: all 0.3s ease;
+    max-width: 200px; /* Set max width to make it more narrow */
+  }
   
+  /* Add hover effect to dropdown */
+  select:hover {
+    border-color: #ea9e78; /* Change border color on hover */
+  }
+  
+  /* ------------------------------------------- */
+
+  /* Style for the past mental health info (textarea) */
+textarea {
+    width: 100%; /* Adjust width as needed */
+    max-width: 850px; /* Make the textarea wider */
+    height: 150px; /* Make the textarea much taller */
+    font-size: 18px; /* Increase the font size */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #000000; /* Match with other inputs */
+    outline: none;
+    resize: none; /* Disable resizing of the textarea */
+    transition: all 0.3s ease;
+    text-align: center; /* Center the text inside the textarea */
+    margin-top: 20px; /* Add space above the textarea */
+    color: #000; /* Ensure the text color is black */
+  }
+  
+  /* Add hover effect to the textarea */
+  textarea:hover {
+    border-color: #ea9e78; /* Change border color on hover */
+  }
   
