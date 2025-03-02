@@ -20,7 +20,7 @@ const ChatPage: React.FC = () => {
 
   return (
     <div className="chat-container">
-      <h1>Welcome to the Magic Mirror Chat Page</h1>
+      <h1>Chat with the Magic Mirror</h1>
       {/* Input Form (Left-Aligned) */}
       <div className="input" style={{ marginTop: '10px' }}>
         <form method="post" onSubmit={handleData}>
