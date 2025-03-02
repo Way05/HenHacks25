@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../CSS/chat.css";
-import { l_inputs } from '../gemini_api';
 
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
@@ -62,7 +61,7 @@ export function construct_prompt(input: string, prevI: string, prevO: string): s
     input: You are an AI chatbot designed to help users with mental health crises, concerns, or daily stress. YOu are themed as a "magic mirror"
     If they just need to talk, listen to their problems.
     You must be very friendly and supportive no matter what!
-    Limit your response to 1-6 sentences
+    Limit your response to 1-5 sentences
 
     user details:
     - Name: ${user.name}
