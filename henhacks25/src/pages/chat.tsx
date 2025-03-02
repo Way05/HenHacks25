@@ -4,20 +4,21 @@ import "../App.css";
 
 import { handleSubmit } from '../gemini_api';
 
-  const ChatPage: React.FC = () => {
-    const [response, setResponse] = useState("Waiting for input");
+const ChatPage: React.FC = () => {
+  const [response, setResponse] = useState("Waiting for input");
 
-    const handleData = (data: any) => {
-      const output = handleSubmit(data).then(function(e) {
-        setResponse(e);
-      });
-    }
+  const handleData = (data: any) => {
+    const output = handleSubmit(data).then(function(e) {
+      setResponse(e);
+    });
+  }
 
-    return (
-      <div className="Magic Mirror">
-        <h1>Welcome to the Magic Mirror Chat Page</h1>
-  
-        {/* Form */}
+  return (
+    <div className="Magic Mirror">
+      <h1>Welcome to the Magic Mirror Chat Page</h1>
+
+      <div className="image-container">
+        <img src="/images/mirror.jpg" alt="Chat Page Image" />
         <div className="input">
           <form method="post" onSubmit={handleData}>
             <label>
@@ -28,11 +29,7 @@ import { handleSubmit } from '../gemini_api';
           </form>
         </div>
 
-        <div>
-          <p>{response}</p>
-        </div>
-  
-        {/* Link to Profile Page */}
+        {/* Link to Profile and Home Page */}
         <div className="nav">
           <Link to="/">
             <button>Go to Home Page</button>
@@ -41,6 +38,7 @@ import { handleSubmit } from '../gemini_api';
             <button>Go to Profile Page</button>
           </Link>
         </div>
+      </div>
     </div>
   );
 };
