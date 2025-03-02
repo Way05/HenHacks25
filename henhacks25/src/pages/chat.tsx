@@ -20,14 +20,11 @@ const ChatPage: React.FC = () => {
   return (
     <div className="chat-container">
       <h1>Welcome to the Magic Mirror Chat Page</h1>
-      <img src = "/images/mirror.jpg" alt = "" />
       {/* Input Form (Left-Aligned) */}
       <div className="input" style={{ marginTop: '10px' }}>
         <form method="post" onSubmit={handleData}>
-          <label>
-            <p style={{ margin: 0 }}>Input your text here:</p>
+            <p>Input your text here:</p>
             <input name="myInput" defaultValue="" />
-          </label>
           <br />
           <button type="reset">Reset form</button>
           <button type="submit">Submit form</button>
@@ -36,6 +33,10 @@ const ChatPage: React.FC = () => {
 
       {/* AI Response (Right-Aligned) */}
       <div className="response-container">
+        <div>
+      <img src = "/images/mirror.jpg" alt = "" />
+
+        </div>
         <div className="response">
           <p>{response}</p>
         </div>
