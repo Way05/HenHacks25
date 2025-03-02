@@ -28,7 +28,7 @@ const ChatPage: React.FC = () => {
             <textarea name="myInput" defaultValue="" />
           <br />
           <button type="reset">Clear</button>
-          <button type="submit">Enter</button>
+          <button type="submit">Chat</button>
         </form>
       </div>
 
