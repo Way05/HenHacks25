@@ -3,7 +3,7 @@ import { l_responses } from "./pages/chat";
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 export const l_inputs: string[] = [];
-const genAI = new GoogleGenerativeAI("AIzaSyCWpbk1sPa-BlZ_1faY4Oyvr8SpxT6govg");
+const genAI = new GoogleGenerativeAI("API KEY HERE");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 async function fetchResponse(prompt: string) {
