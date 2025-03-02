@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../CSS/chat.css";
-import { l_inputs } from '../gemini_api';
 
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
