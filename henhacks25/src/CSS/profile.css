@@ -127,7 +127,6 @@ h1 {
     width: 100%;
     max-width: 250px; /* Adjusted max width to make the dropdown narrower */
     margin-top: 20px; /* Space above each dropdown */
-    margin-bottom: 20px; /* Space below each dropdown */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,3 +175,11 @@ textarea {
     border-color: #ea9e78; /* Change border color on hover */
   }
   
+  .history-textbox {
+    width: 100%;
+    max-width: 250px; /* Adjusted max width to make the dropdown narrower */
+    margin-bottom: 20px; /* Space below each dropdown */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

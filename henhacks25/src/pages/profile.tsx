@@ -81,12 +81,14 @@ const ProfilePage: React.FC = () => {
         </div>
 
         {/* Past Mental Health Info */}
+        <div className="history-textbox">
         <textarea
           name="past"
           placeholder="Enter any past mental health diagnoses, symptoms, intensity, or anything else relevant"
           value={past}
           onChange={handleChange(setPast, "past")}
         />
+        </div>
       </div>
 
       {/* Navigation Buttons at Bottom */}
