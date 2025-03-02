@@ -1,9 +1,11 @@
 /* Ensure the body and html take full height */
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
   
   /* Home page container to take up full height */
@@ -27,8 +29,15 @@ body, html {
   }
   
   /* Style for the image */
+  .imgDiv {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  }
   img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 20px;
   }
