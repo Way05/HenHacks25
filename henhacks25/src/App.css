@@ -45,14 +45,14 @@ img{
 }
 
 .image-container img {
-  width: 50%;
-  height: 200%;
-  transform: translate(5%,-5%);
+  width: auto;
+  height: 50;
+  transform: translate(5%,-4%);
 }
 
 .image-container .input {
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: bottom;
