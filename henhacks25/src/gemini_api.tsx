@@ -1,8 +1,8 @@
 import { construct_prompt } from "./pages/chat";
-import React, { useState } from "react";
+import { l_responses } from "./pages/chat";
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-
+export const l_inputs: string[] = [];
 const genAI = new GoogleGenerativeAI("AIzaSyCWpbk1sPa-BlZ_1faY4Oyvr8SpxT6govg");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -22,7 +22,8 @@ function handleSubmit(e: any) {
     // console.log(formJson.myInput);
 
     //UNCOMMENT THIS TO RECEIVE RESPONSES FROM GEMINI AI
-    const response = fetchResponse(construct_prompt(formJson.myInput.toString(),"",""));
+    l_inputs.push(formJson.myInput.toString())
+    const response = fetchResponse(construct_prompt(formJson.myInput.toString(),l_inputs.join('\n\n\n'),l_responses.join('\n\n\n')));
 
     // console.log(response);
     return response

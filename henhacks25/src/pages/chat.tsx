@@ -4,13 +4,15 @@ import "../App.css";
 
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
-
+export const l_responses: string[] = []
 const ChatPage: React.FC = () => {
   const [response, setResponse] = useState("Waiting for input");
 
     const handleData = (data: any) => {
-      const output = handleSubmit(data).then(function(e) {
-        setResponse(e);
+      const output = handleSubmit(data).then(function(result) {
+        setResponse(result);
+        l_responses.push(result)
+
       });
     }
     
@@ -45,7 +47,7 @@ const ChatPage: React.FC = () => {
   );
 };
 
-export function construct_prompt(input: string,prevI: string, prevO: string): string{
+export function construct_prompt(input: string, prevI: string, prevO: string): string{
   const user = getUserInfo()
   return `
     input: You are an AI chatbot designed to help users with mental health crises, concerns, or daily stress. 
@@ -58,12 +60,12 @@ export function construct_prompt(input: string,prevI: string, prevO: string): st
     - Age: ${user.age}
     - Pronouns: ${user.gender}
     - Job: ${user.job}
-    - Mental health history: ${user.past}
+    - Mental health history: ${user.past} don't reference this unless its releveant to user input
 
     user prompt: (This is what the user has inputted) 
     "${input}"
 
-    past interactions:
+    past interactions (each one separated by 3 new lines):
     - Previous user inputs: ${prevI}
     - Previous AI responses: ${prevO}
 
