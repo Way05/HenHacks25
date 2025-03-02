@@ -18,7 +18,7 @@ const ChatPage: React.FC = () => {
       <h1>Welcome to the Magic Mirror Chat Page</h1>
 
       <div className="image-container">
-        <img src="/images/mirror.jpg" alt="Chat Page Image" />
+        <img src="/images/mirror.jpg" alt="" />
         <div className="input">
           <form method="post" onSubmit={handleData}>
             <label>
