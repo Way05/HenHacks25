@@ -10,10 +10,10 @@ const Home: React.FC = () => {
 
       {/* Instructions Div */}
       <div className="instructions">
-        <h2>How to Use</h2>
+        <h2>How to Use:</h2>
         <p>
-          Welcome to the Magic Mirror! This is where you can interact with the AI. To get started,
-          click on the buttons below to either edit your profile or chat with the AI. Enjoy your experience!
+          Welcome to the Magic Mirror! This is where you can interact with your own mental health mirror aid. To get started,
+          click on the buttons below to either edit your profile or chat with the mirror. Enjoy your experience!
         </p>
       </div>
 
