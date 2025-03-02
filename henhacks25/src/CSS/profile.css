@@ -10,11 +10,17 @@ body, html {
   .profile-container {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
-    position: relative;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: auto;
   }
   
   /* ------------------------------------------- */
@@ -32,6 +38,8 @@ h1 {
     letter-spacing: 1px; /* Add spacing between letters */
     padding: 10px;
     border-radius: 8px; /* Rounded corners for the header */
+    margin: auto;
+    position: absolute;
   }
   
 /* ------------------------------------------- */
