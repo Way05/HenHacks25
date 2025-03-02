@@ -24,6 +24,10 @@ body, html {
     min-height: 100vh;
     margin: auto;
   }
+
+  hr {
+    width: 100%;
+  }
   
   /* ------------------------------------------- */
 
@@ -39,9 +43,14 @@ h1 {
     text-transform: uppercase; /* Capitalize all letters */
     letter-spacing: 1px; /* Add spacing between letters */
     padding: 10px;
-    border-radius: 8px; /* Rounded corners for the header */
+    border-radius: 10px; /* Rounded corners for the header */
     margin: auto;
     position: absolute;
+  }
+
+  p {
+    color: white;
+    font-weight: bold;
   }
   
 /* ------------------------------------------- */
@@ -51,7 +60,7 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     left: 0;
   }
@@ -60,7 +69,7 @@ h1 {
   .button-container button {
     font-size: 18px;
     padding: 12px 24px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -99,7 +108,7 @@ h1 {
     font-size: 18px;
     padding: 15px;
     border: 2px solid #000000;
-    border-radius: 8px;
+    border-radius: 10px;
     outline: none;
     text-align: center; /* Center the placeholder */
     transition: all 0.5s ease-in-out;
@@ -148,7 +157,7 @@ h1 {
     height: 40px;
     font-size: 16px;
     padding: 10px;
-    border-radius: 8px; /* Rounded edges */
+    border-radius: 10px; /* Rounded edges */
     border: 2px solid #000000;
     outline: none;
     text-align: center; /* Center the options */
@@ -170,7 +179,7 @@ textarea {
     height: 150px; /* Make the textarea much taller */
     font-size: 18px; /* Increase the font size */
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 2px solid #000000; /* Match with other inputs */
     outline: none;
     resize: none; /* Disable resizing of the textarea */

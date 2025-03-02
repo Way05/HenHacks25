@@ -25,7 +25,7 @@ const ChatPage: React.FC = () => {
       <div className="input" style={{ marginTop: '10px' }}>
         <form method="post" onSubmit={handleData}>
             <p>Input your text here:</p>
-            <input name="myInput" defaultValue="" />
+            <textarea name="myInput" defaultValue="" />
           <br />
           <button type="reset">Clear</button>
           <button type="submit">Ask</button>

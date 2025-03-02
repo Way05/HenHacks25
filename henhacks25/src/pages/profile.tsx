@@ -30,7 +30,8 @@ const ProfilePage: React.FC = () => {
     <div className="profile-container">
       <h1>Edit Your Profile</h1>
       <div className="input-container">
-      <p>Add some details for Gemini to get to know you!</p>
+        <hr></hr>
+      <p>Add some details for <i>The Mirror</i> to get to know you!</p>
         {/* Name Input with Floating Placeholder */}
         <div className="name-container">
           <input
@@ -89,10 +90,11 @@ const ProfilePage: React.FC = () => {
           onChange={handleChange(setPast, "past")}
         />
         </div>
+        <hr></hr>
       </div>
 
       {/* Navigation Buttons at Bottom */}
-      <div className="button-container">
+      <div className="nav">
         <Link to="/">
           <button>Go to Home Page</button>
         </Link>

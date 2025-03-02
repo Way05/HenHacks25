@@ -35,7 +35,7 @@
 .input button {
   font-size: 18px;
   padding: 12px 24px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -74,7 +74,7 @@
   font-size: 14px;
   color: #ffffff; /* Change text color for better contrast */
   background-color: #6d87de; /* Background color for response */
-  border-radius: 5px; /* Make the box more boxy with smaller border radius */
+  border-radius: 10px; /* Make the box more boxy with smaller border radius */
   word-wrap: break-word; /* Make sure long words don't overflow */
   display: inline-block;
 }
@@ -100,7 +100,7 @@ h1 {
 .nav button {
   font-size: 18px;
   padding: 12px 24px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
