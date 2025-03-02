@@ -1,77 +1,100 @@
 /* Ensure the body and html take full height */
 body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  /* Home page container to take up full height */
-  .Home {
-    /* flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: relative; */
-  }
-  
-  /* Style for the header (h1) */
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for the image */
-  .imgDiv {
-    display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Home page container */
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 100vh; /* Full height of the viewport */
+  position: relative;
+}
+
+/* Style for the header (h1) */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Instructions Section - Left Aligned and Vertically Centered */
+.instructions {
+  position: absolute;
+  left: 20px; /* Left align the instructions */
+  top: 50%; /* Vertically center the instructions */
+  transform: translateY(-50%); /* Adjust to center properly */
+  background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  width: 300px; /* Fixed width for the instructions box */
+  text-align: left;
+}
+
+/* Instructions header (h2) */
+.instructions h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the image */
+.imgDiv {
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  /* Navigation buttons container */
-  .nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 20px; /* Position the buttons at the bottom */
-  }
-  
-  /* Style for the buttons */
-  .nav button {
-    font-size: 18px;
-    padding: 12px 24px;
-    border-radius: 10px;
-    border: none;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 10px; /* Space between the buttons */
-  }
-  
-  /* Hover effect */
-  .nav button:hover {
-    background-color: #ea9e78;
-    transform: scale(1.05);
-  }
-  
-  /* Click effect */
-  .nav button:active {
-    transform: scale(0.95);
-  }
-  
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Navigation buttons container */
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+}
+
+/* Buttons */
+.nav button {
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+/* Button hover effect */
+.nav button:hover {
+  background-color: #ea9e78;
+  transform: scale(1.05);
+}
+
+/* Button click effect */
+.nav button:active {
+  transform: scale(0.95);
+}
