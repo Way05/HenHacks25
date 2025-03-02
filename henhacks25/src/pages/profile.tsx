@@ -45,34 +45,40 @@ const ProfilePage: React.FC = () => {
         </div>
 
         {/* Age Dropdown */}
-        <select name="age" value={age} onChange={handleChange(setAge, "age")}>
-          <option value="" disabled>Choose your age</option>
-          <option value="Prefer not to say">Prefer not to say</option>
-          {Array.from({ length: 100 }, (_, index) => index + 1).map((num) => (
-            <option key={num} value={num}>{num}</option>
-          ))}
-        </select>
+        <div className="select-container">
+          <select name="age" value={age} onChange={handleChange(setAge, "age")}>
+            <option value="" disabled>Choose your age</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+            {Array.from({ length: 100 }, (_, index) => index + 1).map((num) => (
+              <option key={num} value={num}>{num}</option>
+            ))}
+          </select>
+        </div>
 
         {/* Job Dropdown */}
-        <select name="job" value={job} onChange={handleChange(setJob, "job")}>
-          <option value="" disabled>Choose your job</option>
-          <option value="Student">Student</option>
-          <option value="Student & Employed">Student & Employed</option>
-          <option value="Full Time Employed">Full Time Employed</option>
-          <option value="Part Time Employed">Part Time Employed</option>
-          <option value="Unemployed">Unemployed</option>
-          <option value="Prefer not to say">Prefer not to say</option>
-        </select>
+        <div className="select-container">
+          <select name="job" value={job} onChange={handleChange(setJob, "job")}>
+            <option value="" disabled>Choose your job</option>
+            <option value="Student">Student</option>
+            <option value="Student & Employed">Student & Employed</option>
+            <option value="Full Time Employed">Full Time Employed</option>
+            <option value="Part Time Employed">Part Time Employed</option>
+            <option value="Unemployed">Unemployed</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+        </div>
 
         {/* Gender Dropdown */}
-        <select name="gender" value={gender} onChange={handleChange(setGender, "gender")}>
-          <option value="" disabled>Choose your pronouns</option>
-          <option value="He">he/him</option>
-          <option value="Her">she/her</option>
-          <option value="They">they/them</option>
-          <option value="Other">Other</option>
-          <option value="Prefer not to say">Prefer not to say</option>
-        </select>
+        <div className="select-container">
+          <select name="gender" value={gender} onChange={handleChange(setGender, "gender")}>
+            <option value="" disabled>Choose your pronouns</option>
+            <option value="He">he/him</option>
+            <option value="Her">she/her</option>
+            <option value="They">they/them</option>
+            <option value="Other">Other</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+        </div>
 
         {/* Past Mental Health Info */}
         <textarea
