@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../CSS/profile.css";
 
 const ProfilePage: React.FC = () => {
   // State for user inputs
@@ -26,57 +27,64 @@ const ProfilePage: React.FC = () => {
     };
 
   return (
-    <div>
+    <div className="profile-container">
       <h1>Edit Your Profile</h1>
 
-      {/* Name Input */}
-      <textarea
-        name="name"
-        placeholder="Enter your name here"
-        value={name}
-        onChange={handleChange(setName, "name")}
-      />
+      <div className="input-container">
+        {/* Name Input with Floating Placeholder */}
+        <div className="name-container">
+          <input
+            type="text"
+            name="name"
+            className="name-box"
+            placeholder=" "
+            value={name}
+            onChange={handleChange(setName, "name")}
+          />
+          <label className="name-box-label">Write name here</label>
+        </div>
 
-      {/* Age Dropdown */}
-      <select name="age" value={age} onChange={handleChange(setAge, "age")}>
-        <option value="" disabled>Choose your age</option>
-        <option value="Prefer not to say">Prefer not to say</option>
-        {Array.from({ length: 100 }, (_, index) => index + 1).map((num) => (
-          <option key={num} value={num}>{num}</option>
-        ))}
-      </select>
+        {/* Age Dropdown */}
+        <select name="age" value={age} onChange={handleChange(setAge, "age")}>
+          <option value="" disabled>Choose your age</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+          {Array.from({ length: 100 }, (_, index) => index + 1).map((num) => (
+            <option key={num} value={num}>{num}</option>
+          ))}
+        </select>
 
-      {/* Job Dropdown */}
-      <select name="job" value={job} onChange={handleChange(setJob, "job")}>
-        <option value="" disabled>Choose your job</option>
-        <option value="Student">Student</option>
-        <option value="Student & Employed">Student & Employed</option>
-        <option value="Full Time Employed">Full Time Employed</option>
-        <option value="Part Time Employed">Part Time Employed</option>
-        <option value="Unemployed">Unemployed</option>
-        <option value="Prefer not to say">Prefer not to say</option>
-      </select>
+        {/* Job Dropdown */}
+        <select name="job" value={job} onChange={handleChange(setJob, "job")}>
+          <option value="" disabled>Choose your job</option>
+          <option value="Student">Student</option>
+          <option value="Student & Employed">Student & Employed</option>
+          <option value="Full Time Employed">Full Time Employed</option>
+          <option value="Part Time Employed">Part Time Employed</option>
+          <option value="Unemployed">Unemployed</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
 
-      {/* Gender Dropdown */}
-      <select name="gender" value={gender} onChange={handleChange(setGender, "gender")}>
-        <option value="" disabled>Choose your pronouns</option>
-        <option value="He">he/him</option>
-        <option value="Her">she/her</option>
-        <option value="They">they/them</option>
-        <option value="Other">Other</option>
-        <option value="Prefer not to say">Prefer not to say</option>
-      </select>
+        {/* Gender Dropdown */}
+        <select name="gender" value={gender} onChange={handleChange(setGender, "gender")}>
+          <option value="" disabled>Choose your pronouns</option>
+          <option value="He">he/him</option>
+          <option value="Her">she/her</option>
+          <option value="They">they/them</option>
+          <option value="Other">Other</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
 
-      {/* Past Mental Health Info */}
-      <textarea
-        name="past"
-        placeholder="Enter any past mental health diagnoses, symptoms, intensity, or anything else relevant"
-        value={past}
-        onChange={handleChange(setPast, "past")}
-      />
+        {/* Past Mental Health Info */}
+        <textarea
+          name="past"
+          placeholder="Enter any past mental health diagnoses, symptoms, intensity, or anything else relevant"
+          value={past}
+          onChange={handleChange(setPast, "past")}
+        />
+      </div>
 
-      {/* Navigation Buttons */}
-      <div>
+      {/* Navigation Buttons at Bottom */}
+      <div className="button-container">
         <Link to="/">
           <button>Go to Home Page</button>
         </Link>
