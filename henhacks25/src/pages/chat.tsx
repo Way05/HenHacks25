@@ -9,19 +9,17 @@ const ChatPage: React.FC = () => {
     <div className="Magic Mirror">
       <h1>Welcome to the Magic Mirror Chat Page</h1>
 
-      {/* Add an image */}
-      <img src="images/mirror.jpg" alt="" />
-
-      {/* Form */}
-      <div className="input">
-        <form method="post" onSubmit={handleSubmit}>
-          <label>
-            Text input: <input name="myInput" defaultValue="Some initial value" />
-          </label>
-
-          <button type="reset">Reset form</button>
-          <button type="submit">Submit form</button>
-        </form>
+      <div className="image-container">
+        <img src="images/mirror.jpg" alt="" />
+        <div className="input">
+          <form method="post" onSubmit={handleSubmit}>
+            <label>
+              Text input: <input name="myInput" defaultValue="" />
+            </label>
+            <button type="reset">Reset form</button>
+            <button type="submit">Submit form</button>
+          </form>
+        </div>
       </div>
 
       {/* Link to Profile Page */}
