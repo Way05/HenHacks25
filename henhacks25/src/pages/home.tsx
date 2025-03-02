@@ -7,7 +7,10 @@ const Home: React.FC = () => {
   return (
     <div className="Home">
       <h1>Welcome to the Magic Mirror</h1>
+      <div className="imgDiv">
+
       <img src="/images/mirror.jpg" alt="" />
+      </div>
 
       {/* Link to Profile Page */}
       <div className="nav">
