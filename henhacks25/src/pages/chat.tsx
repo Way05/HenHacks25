@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../CSS/chat.css";
+import { l_inputs } from '../gemini_api';
 
 import { handleSubmit } from '../gemini_api';
 import { getUserInfo } from '../App';
@@ -26,8 +27,8 @@ const ChatPage: React.FC = () => {
             <p>Input your text here:</p>
             <input name="myInput" defaultValue="" />
           <br />
-          <button type="reset">Reset form</button>
-          <button type="submit">Submit form</button>
+          <button type="reset">Clear</button>
+          <button type="submit">Ask</button>
         </form>
       </div>
 
