@@ -15,10 +15,10 @@ const ChatPage: React.FC = () => {
     }
     
     return (
-      <div className="Magic Mirror">
+      <><div className="Magic Mirror">
 
         <h1>Welcome to the Magic Mirror Chat Page</h1>
-  
+
         {/* Form */}
         <div className="input">
           <form method="post" onSubmit={handleData}>
@@ -39,12 +39,9 @@ const ChatPage: React.FC = () => {
             <button>Go to Profile Page</button>
           </Link>
         </div>
-      </div>
-
-      <div className="response">
-        <p>{response}</p>
-      </div>
-    </div>
+      </div><div className="response">
+          <p>{response}</p>
+        </div></>
   );
 };
 
